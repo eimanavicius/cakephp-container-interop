@@ -1,0 +1,26 @@
+{
+    "name": "eimanavicius/cakephp-container-interop",
+    "description": "Container Interoperability plugin for CakePHP 2.x",
+    "type": "cakephp-plugin",
+    "require": {
+        "php": ">=5.3",
+        "container-interop/container-interop": "^1.0",
+        "cakephp/cakephp": "^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~3.7.0"
+    },
+    "suggest": {
+        "eimanavicius/cakephp-zend-servicemanager": "To use zend-servicemanager for dependency injection"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nerijus Eimanavičius",
+            "email": "nerijus@eimanavicius.lt"
+        }
+    ],
+    "extra": {
+        "installer-name": "ContainerInterop"
+    }
+}
