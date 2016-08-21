@@ -8,7 +8,15 @@
         "cakephp/cakephp": "^2.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "~3.7.0"
+        "phpunit/phpunit": "~3.7.0",
+        "cakephp/cakephp-codesniffer": "^1.0"
+    },
+    "scripts": {
+        "test": [
+            "@install-cakephp-cs",
+            "phpcs -s --standard=CakePHP --ignore=Test,vendor/ ."
+        ],
+        "install-cakephp-cs": "phpcs --config-set installed_paths vendor/cakephp/cakephp-codesniffer"
     },
     "suggest": {
         "eimanavicius/cakephp-zend-servicemanager": "To use zend-servicemanager for dependency injection"

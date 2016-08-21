@@ -1,4 +1,9 @@
 <?php
+/**
+ * CakePHP Container Interop Plugin initialization.
+ *
+ * Handles registering initialized container in ClassRegistry\
+ */
 
 use Interop\Container\ContainerInterface;
 
