@@ -1,4 +1,7 @@
-### Composer template
+### Composer
+composer.lock
 composer.phar
-/vendor/
+vendor/
 
+### IDEA
+.idea/
