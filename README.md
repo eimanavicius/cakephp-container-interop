@@ -16,24 +16,47 @@ composer require eimanavicius/cakephp-container-interop
 
 or add requirement to your `composer.json` file manually and don't forget to run `composer update`
 
-```
-"require": {
+```json
+{
+  "require": {
     "eimanavicius/cakephp-container-interop": "^0.0"
+  }
 }
 ```
 
 ## Configuration
 
-By default container is loaded from file `app/Config/container.php` (file should return configured service container instance). You can change that by specifying config value before plugin load:
-
-```
-Configure::write('Interop\Container\ContainerInterface', 'app/Config/your-container-setup.php');
-```
+### Plugin loading
 
 Load the plugin as any other plugin in `app/Config/bootstrap.php`:
 
-```
+```php
 CakePlugin::load('ContainerInterop', array('bootstrap' => true));
 ```
 
 The bootstrap file must be loaded, to set up all configurations needed.
+
+### Add pre-configured service container
+
+By installing [Zend Service Manager](https://github.com/eimanavicius/cakephp-zend-servicemanager) plugin. 
+
+More pre-configured service containers will be provided as they appear.
+
+### Or configure your container instance
+
+By default container is loaded from file `app/Config/container.php` (file should return configured service container instance as in sample below). You can change file location by specifying config value before plugin load:
+
+```php
+Configure::write('Interop\Container\ContainerInterface', 'app/Config/container.php');
+```
+
+#### app/Config/container.php sample
+
+```php
+<?php
+
+// Build container
+$container = new SomeServiceContainer();
+
+return $container;
+```
