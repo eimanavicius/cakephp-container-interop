@@ -2,6 +2,3 @@
 composer.lock
 composer.phar
 vendor/
-
-### IDEA
-.idea/
